@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../servicos/user.service';
+import { Button } from 'protractor';
 
 @Component({
   selector: 'app-tab1',
@@ -24,6 +25,7 @@ export class Tab1Page {
   }
 
   public buscarUsuarios(pagina: Number){
+
     this.userService.listaUsuarios(pagina).subscribe(dados => {
 
       this.page = dados['page'];
